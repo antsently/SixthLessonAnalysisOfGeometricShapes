@@ -1,116 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/header_one"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ПРИЛОЖЕНИЕ АНАЛИЗА ГЕОМЕТРИЧЕСКИХ ФИГУР"
-        android:layout_marginTop="30dp"
-        android:textSize="21sp"
-        android:textStyle="bold"
-        android:textColor="#177C3A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/header_two"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:gravity="top"
-        android:text="Ввод данных описываемого прямоугольника:"
-        android:textColor="#4C9063"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        android:layout_marginTop="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_one" />
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <EditText
         android:id="@+id/heightInput"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Введите высоту"
-        android:textColor="#177C3A"
-        android:textColorHint="#4C9063"
-        android:background="#D6EFDF"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        android:ems="10"
-        android:inputType="number"
-        android:layout_marginTop="14dp"
-        android:paddingStart="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_two" />
-
-    <EditText
-        android:id="@+id/widthInput"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:hint="Введите ширину"
-        android:textColor="#177C3A"
-        android:textColorHint="#4C9063"
-        android:background="#D6EFDF"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        android:ems="10"
-        android:inputType="number"
-        android:layout_marginTop="14dp"
-        android:paddingStart="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heightInput" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите расстояние (км)"
+        android:inputType="numberDecimal"/>
 
     <Button
         android:id="@+id/button"
-        android:layout_width="350dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="14dp"
-        android:text="Рассчитать"
-        android:backgroundTint="#177C3A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/widthInput" />
-
-    <TextView
-        android:id="@+id/header_three"
-        android:layout_width="350dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="top"
-        android:text="Результаты расчёта:"
-        android:textColor="#4C9063"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        android:layout_marginTop="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:text="Рассчитать"
+        android:layout_marginTop="8dp"/>
 
     <TextView
         android:id="@+id/output"
-        android:layout_width="350dp"
-        android:layout_height="300dp"
-        android:padding="10dp"
-        android:gravity="top"
-        android:hint="Расчитанные данные вписанных фигур"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        android:textColor="#177C3A"
-        android:textColorHint="#4C9063"
-        android:background="#E6EFE9"
-        android:layout_marginTop="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_three"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

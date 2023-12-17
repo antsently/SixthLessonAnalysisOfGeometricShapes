@@ -3,20 +3,16 @@ package com.msaggik.sixthlessonanalysisofgeometricshapes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.msaggik.sixthlessonanalysisofgeometricshapes.entity.CircleFigure;
-import com.msaggik.sixthlessonanalysisofgeometricshapes.entity.GeometricFigure;
-import com.msaggik.sixthlessonanalysisofgeometricshapes.entity.SquareFigure;
-import com.msaggik.sixthlessonanalysisofgeometricshapes.entity.TriangleFigure;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
-    // поля
-    private GeometricFigure circle, square, triangle; // геометрические фигуры
-    private EditText height, width;
+    private EditText height;
     private Button button;
     private TextView output;
 
@@ -25,35 +21,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // привязка полей к разметке
         height = findViewById(R.id.heightInput);
-        width = findViewById(R.id.widthInput);
         button = findViewById(R.id.button);
         output = findViewById(R.id.output);
 
-        // обработка нажатия кнопки
-        button.setOnClickListener(listener);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                double distance = Double.parseDouble(height.getText().toString()); // Расстояние введенное пользователем
+
+                Airplane1 airplane1 = new Airplane1(210, 850, 3.7);
+                double fuelAirplane1 = airplane1.calculateFuelConsumption(distance);
+                double timeAirplane1 = airplane1.calculateTime(distance);
+
+                Airplane2 airplane2 = new Airplane2(189, 900, 2.8);
+                double fuelAirplane2 = airplane2.calculateFuelConsumption(distance);
+                double timeAirplane2 = airplane2.calculateTime(distance);
+
+                Helicopter helicopter = new Helicopter(8, 250, 0.14);
+                double fuelHelicopter = helicopter.calculateFuelConsumption(distance);
+                double timeHelicopter = helicopter.calculateTime(distance);
+
+                // Форматирование значений с помощью DecimalFormat
+                DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                String formattedFuel1 = decimalFormat.format(fuelAirplane1);
+                String formattedTime1 = decimalFormat.format(timeAirplane1);
+                String formattedFuel2 = decimalFormat.format(fuelAirplane2);
+                String formattedTime2 = decimalFormat.format(timeAirplane2);
+                String formattedFuelH = decimalFormat.format(fuelHelicopter);
+                String formattedTimeH = decimalFormat.format(timeHelicopter);
+
+//                Log.d("Airplane1", "Топливо: " + fuelAirplane1 + " т, Время: " + timeAirplane1 + " часов");
+//                Для себя ленивого делал!
+
+                output.setText("Самолет 1:\nТопливо: " + formattedFuel1 + " т\nВремя: " + formattedTime1 + " часов\n\n" + "Самолет 2:\nТопливо: " + formattedFuel2 + " т\nВремя: " + formattedTime2 + " часов\n\n" + "Вертолет:\nТопливо: " + formattedFuelH + " т\nВремя: " + formattedTimeH + " часов");
+            }
+        });
     }
-
-    // создадим слушатель кнопки и с помощью анонимного класса переопределим метод onClick(View view)
-    private View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            // исполняемый код при нажатии кнопки
-            // считывание введённых данных
-            int heightFigure = Integer.parseInt(height.getText().toString());
-            int widthFigure = Integer.parseInt(width.getText().toString());
-
-            // инициализация объектов класса GeometricFigure
-            circle = new CircleFigure(0xFF0000, heightFigure, widthFigure); // 0xFF0000 - красный цвет
-            square = new SquareFigure(0x00FF00, heightFigure, widthFigure); // 0x00FF00 - зелёный цвет
-            triangle = new TriangleFigure(0x0000FF, heightFigure, widthFigure); // 0x0000FF - синий цвет
-
-            // вывод данных на экран
-            output.setText("В прямоугольник с указанными параметрами можно вписать:\n"
-                    + "\nКруг с площадью " + circle.area() + " и периметром " + circle.perimeter()
-                    + "\nКвадрат с площадью " + square.area() + " и периметром " + square.perimeter()
-                    + "\nТреугольник с площадью " + triangle.area() + " и периметром " + triangle.perimeter());
-        }
-    };
 }
