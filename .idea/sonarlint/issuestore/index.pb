@@ -5,3 +5,27 @@ Tapp/src/main/java/com/msaggik/sixthlessonanalysisofgeometricshapes/MainActivity
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+ã
+[app/src/main/java/com/msaggik/sixthlessonanalysisofgeometricshapes/entity/CircleFigure.java,e\6\e6b76b6b7e3092f661deb570feb48f304e126f78
+é
+^app/src/main/java/com/msaggik/sixthlessonanalysisofgeometricshapes/entity/GeometricFigure.java,4\9\4923bfbab09f60b9e149b38ec00c88608f406de0
+ç
+]app/src/main/java/com/msaggik/sixthlessonanalysisofgeometricshapes/entity/TriangleFigure.java,b\f\bf9e8e630cb2e4a8f097847e5a94fd0b9954b400
+ã
+[app/src/main/java/com/msaggik/sixthlessonanalysisofgeometricshapes/entity/SquareFigure.java,f\e\fe37d9c126394ee4bad34f868ea410a792a352f6
+Å
+Q.idea/sonarlint/securityhotspotstore/e/6/e6b76b6b7e3092f661deb570feb48f304e126f78,4\2\4272e4c829c989826594fdb9110d0f4bc4dee9ef
+Å
+Q.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,1\0\10a03f31c4dce92cb371e761ce9429428bb6c176
+Å
+Q.idea/sonarlint/securityhotspotstore/4/9/4923bfbab09f60b9e149b38ec00c88608f406de0,1\c\1c8465acc0f4a8ce705a033ec6edd2a1248724b1
+w
+G.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d,b\4\b4a0b63ce8560bbc5de0f9995c20cc861dc2adb3
+w
+G.idea/sonarlint/issuestore/f/e/fe37d9c126394ee4bad34f868ea410a792a352f6,0\5\055f97b695d8b2c274f115e991e8253368c09982
+Å
+Q.idea/sonarlint/securityhotspotstore/b/f/bf9e8e630cb2e4a8f097847e5a94fd0b9954b400,2\3\23b0ec7c67a7b1a6a52bf1d6d401ff6f6a3a0509
+Å
+Q.idea/sonarlint/securityhotspotstore/f/e/fe37d9c126394ee4bad34f868ea410a792a352f6,e\e\eef8390cf64be2de16a9272ee608d65209a14192
