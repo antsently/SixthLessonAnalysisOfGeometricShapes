@@ -1,0 +1,11 @@
+
+u
+java:S11926"ZDefine a constant instead of duplicating this literal " Ğ¸ Ğ¿ĞµÑ€Ğ¸Ğ¼ĞµÑ‚Ñ€Ğ¾Ğ¼ " 3 times.(Áåü¦ıÿÿÿÿ
+C
+java:S1604'"(Make this anonymous inner class a lambda(•†îÃúÿÿÿÿ
+^
+java:S1659"CDeclare "square" and all following declarations on a separate line.(³øÃ×ÿÿÿÿÿ
+9
+java:S1659"#Declare "width" on a separate line.(‡†°¡
+k
+java:S1450"URemove the "button" field and declare it as a local variable in the relevant methods.(ÈòÉ¹
